@@ -1,0 +1,15 @@
+class FibonacciSeries {
+    public static void main(String[] args) {
+        int numTerms = 15;  
+        int firstTerm = 0, secondTerm = 1;
+        System.out.print("Fibonacci Series: ");
+        System.out.print(firstTerm + " " + secondTerm + " ");
+
+        for (int i = 3; i <= numTerms; ++i) {
+            int nextTerm = firstTerm + secondTerm;
+            System.out.print(nextTerm + " ");
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
