@@ -1,0 +1,16 @@
+class username
+{
+	public static void main(String[] args)
+	{
+		String s1="sowji@123";
+		String s2="sowji@123";
+		if(s1==s2)
+		{
+			System.out.println("username is valid");
+		}
+		else
+		{
+			System.out.println("username is not valid");
+		}
+	}
+}
