@@ -1,0 +1,17 @@
+class EvenFibonacciSum {
+    public static void main(String[] args) {
+        int limit = 100; 
+        int first = 0, second = 1, next, sum = 0;
+
+        while (second <= limit) {
+            if (second % 2 == 0) {
+                sum += second;
+            }
+            next = first + second;
+            first = second;
+            second = next;
+        }
+
+        System.out.println("Sum of even Fibonacci numbers up to " + limit + " is: " + sum);
+    }
+}
