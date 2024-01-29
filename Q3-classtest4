@@ -1,0 +1,32 @@
+class composite_prime {
+    public static void main(String[] args) {
+        int[] numbers = {4, 54, 29, 71, 7, 59, 98, 23};
+
+        System.out.print("Composite numbers: ");
+        for (int number : numbers) {
+            if (!isPrime(number)) {
+                System.out.print(number + " ");
+            }
+        }
+
+        System.out.println("\nPrime numbers: ");
+        for (int number : numbers) {
+            if (isPrime(number)) {
+                System.out.print(number + " ");
+               
+            }
+        }
+    }
+
+    static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
