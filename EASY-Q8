@@ -1,0 +1,21 @@
+class interest
+{
+	public static void main(String[] args)
+	{
+		int price=200000;
+		int years=3;
+		System.out.print("Is customer a senior citizen (y/n)? ");
+        char age = System.console().readLine().charAt(0);
+		double interest=0.0;
+		if(age=='y')
+		{
+			interest=(price*years*0.12)/100;
+			System.out.println(interest);
+		}
+		else
+		{
+			interest=(price*years*0.1)/100;
+			System.out.println(interest);
+		}
+	}
+}
