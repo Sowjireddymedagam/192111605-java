@@ -1,0 +1,15 @@
+class revnum
+{
+	public static void main(String[] args)
+	{
+		int n=23546;
+		int Sum=0;
+		while(n!=0)
+		{
+			int rem=n%10;
+			Sum=Sum*10+rem;
+			n/=10;
+		}
+		System.out.println("reversed number: "+Sum);
+	}
+}
