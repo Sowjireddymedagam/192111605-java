@@ -1,0 +1,33 @@
+public class asc_dec {
+    public static void main(String[] args) {
+        String[] names = {"Banana", "Carrot", "Radish", "Apple", "Jack"};
+        System.out.print("Order (A/D): ");
+        char choice = System.console().readLine().charAt(0);
+        bubbleSort(names, choice == 'A');  
+        System.out.println("Sorted names:");
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+    private static void bubbleSort(String[] names, boolean ascending) {
+        int n = names.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (ascending) {
+                    if (names[j].compareTo(names[j + 1]) > 0) { 
+                        swap(names, j, j + 1);
+                    }
+                } else {
+                    if (names[j].compareTo(names[j + 1]) < 0) { 
+                        swap(names, j, j + 1);
+                    }
+                }
+            }
+        }
+    }
+    private static void swap(String[] names, int i, int j) {
+        String temp = names[i];
+        names[i] = names[j];
+        names[j] = temp;
+    }
+}
