@@ -1,0 +1,18 @@
+class splchar {
+    public static void main(String[] args) {
+        String line = "This string has #$%^&*() special characters!";
+        countSpecialChars(line);
+    }
+
+    public static void countSpecialChars(String line) {
+        int specialChars = 0;
+        System.out.print("Special characters: ");
+        for (char ch : line.toCharArray()) {
+            if (!Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch)) {
+                System.out.print(ch + " ");
+                specialChars++;
+            }
+        }
+        System.out.println("\nTotal number of special characters: " + specialChars);
+    }
+}
