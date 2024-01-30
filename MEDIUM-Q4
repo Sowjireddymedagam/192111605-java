@@ -1,0 +1,29 @@
+public class palindrome {
+
+    public static void main(String[] args) {
+        System.out.print("Enter a string or number: ");
+        String input = System.console().readLine();
+
+        boolean isPalindrome = checkPalindrome(input);
+
+        if (isPalindrome) {
+            System.out.println(input + " is a palindrome");
+        } else {
+            System.out.println(input + " is not a palindrome");
+        }
+    }
+
+    public static boolean checkPalindrome(String input) {
+        int length = input.length();
+        int middle = length / 2;
+
+        
+        for (int i = 0; i < middle; i++) {
+            if (input.charAt(i) != input.charAt(length - i - 1)) {
+                return false;  
+            }
+        }
+
+        return true;  
+    }
+}
