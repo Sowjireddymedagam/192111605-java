@@ -1,0 +1,39 @@
+class marks
+{
+	public static void main(String[] args)
+	{
+		System.out.println("enter the marks1:");
+		int m1=Integer.parseInt(System.console().readLine());
+		System.out.println("enter the marks2:");
+		int m2=Integer.parseInt(System.console().readLine());
+		System.out.println("enter the marks3:");
+		int m3=Integer.parseInt(System.console().readLine());
+		System.out.println("enter the marks4:");
+		int m4=Integer.parseInt(System.console().readLine());
+		int total_marks=m1+m2+m3+m4;
+		System.out.println("total marks are:" +total_marks);
+		int aggr=total_marks/4;
+		System.out.println("Aggregation:"+aggr);
+		if(aggr>75)
+		{
+			System.out.println("Distinction");
+		}
+		else if (aggr>=60 && aggr<75)
+		{
+			System.out.println("First class");
+		}
+			else if(aggr>=50 && aggr<60)
+		{
+				System.out.println("second class");
+		}
+				else if(aggr>=40 && aggr<50)
+		{
+					System.out.println("Third class");
+		}
+					else
+		{
+						System.out.println("fail");
+		}
+	}
+
+}
