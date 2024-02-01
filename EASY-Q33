@@ -1,0 +1,10 @@
+class nth_oddnum
+{
+	public static void main(String[] args)
+	{
+	 System.out.println("enter the nth number:");
+	 int n=Integer.parseInt(System.console().readLine());
+	 int odd=(2 * n) + (2 * n) - 1;
+	 System.out.println(n+" th number is" +odd);
+	}
+}
