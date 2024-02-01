@@ -1,0 +1,11 @@
+import java.util.Scanner;
+class sqr_cube
+{
+	public static void main(String[] args)
+	{
+		Scanner Input=new Scanner(System.in);
+		 float n=Input.nextFloat();
+		 System.out.println("the square number is: "+(n*n));
+		 System.out.println("the cube number is: " +(n*n*n));
+	}
+}
