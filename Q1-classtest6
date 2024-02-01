@@ -1,0 +1,17 @@
+class num_vowels {
+   public static void main(String[] args) {
+       String statement = "Saveetha School of Engineering";
+       int vowelCount = 0;
+
+       for (int i = 0; i < statement.length(); i++) {
+           char ch = statement.charAt(i);
+           ch = Character.toLowerCase(ch);
+
+           if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+               vowelCount++;
+           }
+       }
+
+       System.out.println("Number of vowels = " + vowelCount);
+   }
+}
