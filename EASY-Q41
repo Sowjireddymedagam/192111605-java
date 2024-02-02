@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SumOfDigitsSingleDigit {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        int singleDigitSum = sumOfDigits(number);
+        System.out.println("The single-digit sum of the digits of " + number + " is " + singleDigitSum);
+    }
+
+    private static int sumOfDigits(int number) {
+        if (number == 0) {
+            return 0;
+        }
+
+        int sumDigits = 0;
+        while (number > 0) {
+            sumDigits += number % 10;
+            number /= 10;
+        }
+
+        // If the sum is still greater than 9, recursively calculate the sum of its digits
+        if (sumDigits > 9) {
+            return sumOfDigits(sumDigits);
+        }
+
+        return sumDigits;
+    }
+}
