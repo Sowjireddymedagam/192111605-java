@@ -1,0 +1,22 @@
+public class Factorial {
+
+    public static long calculateFactorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
+        }
+
+        // Handle the base case
+        if (n == 0) {
+            return 1;
+        }
+
+        // Recursive case: factorials are product of n * (n-1)!
+        return n * calculateFactorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int n = 4;
+        long factorial = calculateFactorial(n);
+        System.out.println("Factorial of " + n + " is: " + factorial);
+    }
+}
