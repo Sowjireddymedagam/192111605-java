@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ConsonantsVowels {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the word: ");
+        String word = scanner.nextLine().toLowerCase();
+
+        StringBuilder consonants = new StringBuilder();
+        StringBuilder vowels = new StringBuilder();
+
+        for (char letter : word.toCharArray()) {
+            if (isVowel(letter)) {
+                vowels.append(letter);
+            } else if (Character.isLetter(letter)) {
+                consonants.append(letter);
+            }
+        }
+
+        System.out.println("Consonants: " + consonants.toString());
+        System.out.println("Vowels: " + vowels.toString());
+    }
+
+    private static boolean isVowel(char letter) {
+        return "aeiou".indexOf(letter) != -1;
+    }
+}
