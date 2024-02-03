@@ -1,0 +1,13 @@
+class total_user
+{
+	public static void main(String[] args)
+	{
+		System.out.print("enter the total users:");
+		int tot_user=Integer.parseInt(System.console().readLine());
+		System.out.print("enter the staff users:");
+		int staff_user=Integer.parseInt(System.console().readLine());
+		int non_teach=staff_user/3;
+		int Student_user=tot_user-(staff_user+non_teach);
+		System.out.println("number if student users are:"+Student_user);
+	}
+}
