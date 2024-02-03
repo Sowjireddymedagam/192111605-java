@@ -1,0 +1,36 @@
+class bank
+{
+    float getroi()
+    {
+        return 0;
+    }
+}
+class SBI extends bank{
+    float getroi()
+    {
+        return 8.4f;
+    }
+}
+class ICICI extends bank{
+    float getroi()
+    {
+        return 7.3f;
+    }
+}
+class AXIS extends bank
+{
+    float getroi() 
+    {
+        return 9.3f;
+    }
+}
+
+public class banking
+{
+    public static void main(String args[])
+    {
+        bank b;
+        b=new AXIS();
+        System.out.println("the ROI is "+b.getroi());
+    }
+}
