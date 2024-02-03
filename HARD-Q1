@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class year
+{
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		System.out.println("enter the number:");
+		int num=input.nextInt();
+		int year=num/365;
+		System.out.println("year:"+year);
+		int week=(num%365)/7;
+		System.out.println("week:"+week);
+		int days=(num%365)%7;
+		System.out.println("days:"+days);
+	}
+}
