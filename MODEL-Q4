@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class sum_composite 
+{
+    public static void main(String[] args) 
+		{
+        int[] numbers;
+        int numCount, i, j, compositeCount = 0;
+        System.out.print("Enter the number of elements: ");
+        Scanner scanner = new Scanner(System.in);
+        numCount = scanner.nextInt();
+        numbers = new int[numCount];
+        System.out.println("Enter the elements:");
+        for (i = 0; i < numCount; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        for (i = 0; i < numCount; i++) {
+            if (numbers[i] <= 1) {
+                continue;
+            }
+            boolean isComposite = false;
+            for (j = 2; j * j <= numbers[i]; j++) {
+                if (numbers[i] % j == 0) {
+                    isComposite = true;
+                    break;
+                }
+            }
+            if (isComposite) {
+                compositeCount++;
+            }
+        }
+        System.out.println("Number of composite numbers: " + compositeCount);
+    }
+}
